@@ -1,0 +1,269 @@
+$page-bg: #fff9f3;
+$primary: #c48a6a;
+$accent: #f2e4d8;
+$text-dark: #3b2c2a;
+
+.page {
+  background: $page-bg;
+  color: $text-dark;
+  min-height: 100vh;
+  font-family:
+    'Roboto',
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    sans-serif;
+}
+
+section {
+  padding: 4rem 1.5rem;
+  max-width: 1120px;
+  margin: 0 auto;
+
+  &.section-muted {
+    background: rgba(244, 233, 222, 0.6);
+    border-radius: 24px;
+  }
+}
+
+.hero {
+  padding: 0;
+  .hero-toolbar {
+    background: transparent;
+    padding: 1rem 1.5rem;
+  }
+
+  .brand {
+    display: flex;
+    flex-direction: column;
+    .brand-name {
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+    }
+    .brand-sub {
+      font-size: 0.8rem;
+      opacity: 0.8;
+    }
+  }
+
+  .hero-content {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: 2.5rem;
+    align-items: center;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .hero-text {
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 0.5rem;
+    }
+    h2 {
+      font-size: 1.3rem;
+      font-weight: 400;
+      margin-bottom: 1rem;
+      color: darken($primary, 10%);
+    }
+    p {
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-promo {
+      background: $accent;
+      border-radius: 16px;
+      padding: 0.75rem 1rem;
+      display: inline-block;
+
+      .promo-label {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-weight: 600;
+        color: darken($primary, 15%);
+      }
+
+      .promo-text {
+        margin: 0.25rem 0 0;
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  .hero-image {
+    .hero-image-placeholder {
+      border-radius: 24px;
+      background: linear-gradient(135deg, #d9b49c, #f2e4d8);
+      max-height: 260px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 0.95rem;
+      text-align: center;
+      padding: 1rem;
+    }
+  }
+}
+
+.section {
+  h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .section-intro {
+    margin-bottom: 1.5rem;
+    max-width: 640px;
+    line-height: 1.6;
+  }
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+
+  .info-card {
+    padding: 16px;
+    border-radius: 18px;
+    background: #fff;
+  }
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+
+  .gallery-item {
+    background: #fff;
+    border-radius: 18px;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    max-width: 240px;
+    color: rgba($text-dark, 0.8);
+  }
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+
+  .feature {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #fff;
+    border-radius: 18px;
+    padding: 0.75rem 1rem;
+
+    mat-icon {
+      color: $primary;
+    }
+
+    span {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+.details {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.reviews {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+
+  .review-card {
+    border-radius: 18px;
+    background: #fff;
+  }
+
+  .review-text {
+    font-style: italic;
+    margin-bottom: 0.75rem;
+  }
+
+  .review-name {
+    font-size: 0.85rem;
+    opacity: 0.8;
+  }
+}
+
+.booking-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+
+  .booking-card {
+    padding: 16px;
+    border-radius: 18px;
+    background: #fff;
+  }
+}
+
+.booking-notes {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.final-cta {
+  position: relative;
+  padding: 4rem 1.5rem;
+  margin-bottom: 0;
+  max-width: 100%;
+  border-radius: 0;
+  background: linear-gradient(135deg, #d9b49c, #3b2c2a);
+  color: #fff;
+
+  .final-cta-overlay {
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+
+    h3 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+    }
+  }
+}
+
+mat-accordion {
+  background: transparent;
+
+  mat-expansion-panel {
+    border-radius: 12px;
+    margin-bottom: 0.5rem;
+    background: #fff;
+  }
+}

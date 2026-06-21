@@ -1,0 +1,245 @@
+<div class="page">
+
+  <!-- HERO -->
+  <section class="hero">
+    <mat-toolbar color="primary" class="hero-toolbar" fxLayout="row" fxLayoutAlign="space-between center">
+      <div class="brand">
+        <span class="brand-name">Maia Escapes</span>
+        <span class="brand-sub">Alta Living</span>
+      </div>
+      <button mat-stroked-button color="accent" (click)="openPlatform('facebook')">
+        Message Us
+      </button>
+    </mat-toolbar>
+
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Your quiet escape awaits.</h1>
+        <h2>Your space to pause.</h2>
+        <p>
+          Thoughtfully designed for rest, slow mornings, and meaningful stays in Amaia Steps Altaraza, Bulacan.
+        </p>
+        <div class="hero-ctas">
+          <button mat-raised-button color="primary" (click)="openPlatform('airbnb')">
+            Book Your Rest
+          </button>
+          <button mat-button color="accent" (click)="openPlatform('booking')">
+            Check Availability
+          </button>
+        </div>
+        <div class="hero-promo mat-elevation-z2">
+          <span class="promo-label">Limited Offer</span>
+          <p class="promo-text">
+            Flat rate <strong>₱2,399</strong> for 2 guests.
+            Regular: Tue–Thu ₱2,499/night · Fri–Sun ₱2,699/night.
+          </p>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img class="hero-image-placeholder" src="Maia Escapes Banner.png" alt="Hero Photo" />
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT MAKES MAIA DIFFERENT -->
+  <section class="section section-muted">
+    <h3>What makes Maia different</h3>
+    <p class="section-intro">
+      More than a room, Maia Escapes is an intentional space for rest, quiet, and meaningful moments.
+    </p>
+
+    <div class="cards-grid">
+      <mat-card class="info-card">
+        <mat-card-title>🧡 Intentional Spaces</mat-card-title>
+        <mat-card-content>
+          Every corner is designed to help you slow down, breathe, and recharge.
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card class="info-card">
+        <mat-card-title>🌿 Quiet & Restful</mat-card-title>
+        <mat-card-content>
+          A calm environment for rest, deep work, or simply being still.
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card class="info-card">
+        <mat-card-title>☕ Thoughtful Amenities</mat-card-title>
+        <mat-card-content>
+          Cozy balcony, wellness corner, games, and comforts that make staying in feel complete.
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card class="info-card">
+        <mat-card-title>📍 Convenient Location</mat-card-title>
+        <mat-card-content>
+          Located in Amaia Steps Altaraza—near essentials, yet tucked away enough to feel like an escape.
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </section>
+
+  <!-- PHOTO GALLERY (PLACEHOLDERS) -->
+  <section class="section">
+    <h3>See the space</h3>
+    <p class="section-intro">
+      Imagine your stay—slow mornings on the balcony, cozy nights in, and gentle pauses in between.
+    </p>
+
+    <div class="gallery-grid">
+      <img class="gallery-item" src="balcony.png" alt="balcony" (click)="openViewer('balcony.png')" />
+      <img class="gallery-item" src="bathroom-1.png" alt="bathroom-1" (click)="openViewer('bathroom-1.png')" />
+      <img class="gallery-item" src="bathroom-2.png" alt="bathroom-2" (click)="openViewer('bathroom-2.png')" />
+      <img class="gallery-item" src="bathroom-3.png" alt="bathroom-3" (click)="openViewer('bathroom-3.png')" />
+      <img class="gallery-item" src="bed-and-sunrise.png" alt="bed-and-sunrise"
+        (click)="openViewer('bed-and-sunrise.png')" />
+      <img class="gallery-item" src="bed-tv.png" alt="bed-tv" (click)="openViewer('bed-tv.png')" />
+      <img class="gallery-item" src="bed-view.png" alt="bed-view" (click)="openViewer('bed-view.png')" />
+      <img class="gallery-item" src="curtain-close.png" alt="curtain-close" (click)="openViewer('curtain-close.png')" />
+      <img class="gallery-item" src="curtain-open.png" alt="curtain-open" (click)="openViewer('curtain-open.png')" />
+      <img class="gallery-item" src="deck-card.png" alt="deck-card" (click)="openViewer('deck-card.png')" />
+      <img class="gallery-item" src="dining-and-kitchenette-1.png" alt="dining-and-kitchenette-1"
+        (click)="openViewer('dining-and-kitchenette-1.png')" />
+      <img class="gallery-item" src="dining-and-kitchenette-2.png" alt="dining-and-kitchenette-2"
+        (click)="openViewer('dining-and-kitchenette-2.png')" />
+      <img class="gallery-item" src="fire-extinguisher.png" alt="fire-extinguisher"
+        (click)="openViewer('fire-extinguisher.png')" />
+      <img class="gallery-item" src="laundry-area.png" alt="laundry-area" (click)="openViewer('laundry-area.png')" />
+      <img class="gallery-item" src="living-sofa.png" alt="living-sofa" (click)="openViewer('living-sofa.png')" />
+      <img class="gallery-item" src="pool-area.png" alt="pool-area" (click)="openViewer('pool-area.png')" />
+      <img class="gallery-item" src="pool-view.png" alt="pool-view" (click)="openViewer('pool-view.png')" />
+      <img class="gallery-item" src="pool.png" alt="pool" (click)="openViewer('pool.png')" />
+      <img class="gallery-item" src="slow-conversation.png" alt="slow-conversation"
+        (click)="openViewer('slow-conversation.png')" />
+      <img class="gallery-item" src="study-area.png" alt="study-area" (click)="openViewer('study-area.png')" />
+      <img class="gallery-item" src="welcome-note.png" alt="welcome-note" (click)="openViewer('welcome-note.png')" />
+    </div>
+  </section>
+  <!-- UNIT FEATURES -->
+  <section class="section section-muted">
+    <h3>Unit features</h3>
+    <p class="section-intro">
+      Everything you need for a comfortable, restful stay.
+    </p>
+
+    <div class="features-grid">
+      <div class="feature" *ngFor="let feature of features">
+        <mat-icon>{{ feature.icon }}</mat-icon>
+        <span>{{ feature.label }}</span>
+      </div>
+    </div>
+
+    <div class="details">
+      <p><strong>Sleeping setup:</strong> 1 bed (91 cm × 190 cm) + convertible 2-seater sofa bed.</p>
+      <p><strong>Games & wellness:</strong> Othello board game, deck of cards, and a dedicated wellness corner.</p>
+      <p><strong>Location:</strong> Amaia Steps Altaraza, SJDM Bulacan — near SM Tungko, Skyline Hospital, and major
+        establishments.</p>
+    </div>
+  </section>
+
+  <!-- WHY GUESTS LOVE STAYING HERE -->
+  <section class="section">
+    <h3>Why guests love staying here</h3>
+    <div class="reviews">
+      <mat-card class="review-card" *ngFor="let review of reviews">
+        <mat-card-content>
+          <p class="review-text">{{ review.text }}</p>
+          <p class="review-name">{{ review.name }}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </section>
+
+  <!-- THE MAIA STORY -->
+  <section class="section section-muted">
+    <h3>The Maia story</h3>
+    <p class="section-intro">
+      Maia Escapes was created with one intention: to offer a quiet space to pause, rest, and reconnect with yourself.
+    </p>
+    <p>
+      In a world that constantly asks you to keep going, Maia is a gentle invitation to slow down.
+      Here, you are allowed to move slower, breathe deeper, and choose rest on purpose.
+    </p>
+  </section>
+
+  <!-- AVAILABILITY / BOOKING -->
+  <section class="section">
+    <h3>Ready for your quiet escape?</h3>
+    <p class="section-intro">
+      Choose how you want to book and secure your dates.
+    </p>
+
+    <div class="booking-grid">
+      <mat-card class="booking-card">
+        <mat-card-title>Book on Airbnb</mat-card-title>
+        <mat-card-content>
+          Ideal for guests who prefer the Airbnb platform and reviews.
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="primary" (click)="openPlatform('airbnb')">
+            Go to Airbnb
+          </button>
+        </mat-card-actions>
+      </mat-card>
+
+      <mat-card class="booking-card">
+        <mat-card-title>Book on Booking.com</mat-card-title>
+        <mat-card-content>
+          Perfect if you already use Booking.com for your stays.
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="primary" (click)="openPlatform('booking')">
+            Go to Booking.com
+          </button>
+        </mat-card-actions>
+      </mat-card>
+
+      <mat-card class="booking-card">
+        <mat-card-title>Book directly & save</mat-card-title>
+        <mat-card-content>
+          Save up to <strong>20%</strong> when you book directly through our platforms and secure your dates.
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="accent" (click)="openPlatform('facebook')">
+            Message on Facebook
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+
+    <div class="booking-notes">
+      <p><strong>Payment & deposit:</strong> Full payment and a ₱1,000 refundable deposit are required to confirm your
+        booking.</p>
+      <p><strong>Extra guests:</strong> ₱400 per additional guest (3 years old and above). Recommended max of 3 guests
+        for comfort.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section-muted">
+    <h3>Frequently asked questions</h3>
+
+    <mat-accordion>
+      <mat-expansion-panel *ngFor="let faq of faqs">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{ faq.question }}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>{{ faq.answer }}</p>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="section final-cta">
+    <div class="final-cta-overlay">
+      <h3>Your heart needs gentle days.</h3>
+      <p>Pause. Breathe. Rest.</p>
+      <button mat-raised-button color="primary" (click)="openPlatform('airbnb')">
+        Book your rest with us
+      </button>
+    </div>
+  </section>
+
+</div>

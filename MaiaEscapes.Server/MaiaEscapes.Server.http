@@ -1,0 +1,6 @@
+@MaiaEscapes.Server_HostAddress = http://localhost:5258
+
+GET {{MaiaEscapes.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

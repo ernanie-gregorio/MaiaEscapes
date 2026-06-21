@@ -1,0 +1,7 @@
+/* You can add global styles to this file, and also import other style files */
+.fullscreen-dialog .mat-dialog-container {
+  padding: 0 !important;
+  background: transparent;
+  box-shadow: none;
+  max-width: 100vh;
+}
