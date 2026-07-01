@@ -1,16 +1,7 @@
-<div class="page">
-
+<div class="page animate-container">
+  <app-jumbotron></app-jumbotron>
   <!-- HERO -->
   <section class="hero">
-    <mat-toolbar color="primary" class="hero-toolbar" fxLayout="row" fxLayoutAlign="space-between center">
-      <div class="brand">
-        <span class="brand-name">Maia Escapes</span>
-        <span class="brand-sub">Alta Living</span>
-      </div>
-      <button mat-stroked-button color="accent" (click)="openPlatform('facebook')">
-        Message Us
-      </button>
-    </mat-toolbar>
 
     <div class="hero-content">
       <div class="hero-text">
@@ -28,23 +19,34 @@
           </button>
         </div>
         <div class="hero-promo mat-elevation-z2">
-          <span class="promo-label">Limited Offer</span>
+          <span class="promo-label">Recent News</span>
           <p class="promo-text">
-            Flat rate <strong>₱2,399</strong> for 2 guests.
-            Regular: Tue–Thu ₱2,499/night · Fri–Sun ₱2,699/night.
+            Pa-hinga tayo! 45 mins from Philippine Arena, Stadium<br />
+            <br />
+            Maia Escapes 🍂<br />
+            A Japandi-inspired studio for quiet stays and intentional rest, with balcony in prime location, rising sun,
+            Pool view.<br />
+            <br>
+            Units available for rent, short-term or long-term, I got you!
           </p>
         </div>
       </div>
       <div class="hero-image">
-        <img class="hero-image-placeholder" src="Maia Escapes Banner.png" alt="Hero Photo" />
+        <img class="hero-image-placeholder" src="/gallery/brand template guidelines (10).jpg" alt="Hero Photo" />
       </div>
     </div>
   </section>
+  <!-- SHOW HOUSE RULES AGAIN BUTTON -->
+  <!-- <div class="show-rules-wrapper">
+    <button class="show-rules-btn" (click)="showHouseRules()">
+      View House Rules Again 🤍
+    </button>
+  </div> -->
 
   <!-- WHAT MAKES MAIA DIFFERENT -->
   <section class="section section-muted">
     <h3>What makes Maia different</h3>
-    <p class="section-intro">
+    <p class="section">
       More than a room, Maia Escapes is an intentional space for rest, quiet, and meaningful moments.
     </p>
 
@@ -82,43 +84,20 @@
   <!-- PHOTO GALLERY (PLACEHOLDERS) -->
   <section class="section">
     <h3>See the space</h3>
-    <p class="section-intro">
+    <p class="section">
       Imagine your stay—slow mornings on the balcony, cozy nights in, and gentle pauses in between.
     </p>
 
     <div class="gallery-grid">
-      <img class="gallery-item" src="balcony.png" alt="balcony" (click)="openViewer('balcony.png')" />
-      <img class="gallery-item" src="bathroom-1.png" alt="bathroom-1" (click)="openViewer('bathroom-1.png')" />
-      <img class="gallery-item" src="bathroom-2.png" alt="bathroom-2" (click)="openViewer('bathroom-2.png')" />
-      <img class="gallery-item" src="bathroom-3.png" alt="bathroom-3" (click)="openViewer('bathroom-3.png')" />
-      <img class="gallery-item" src="bed-and-sunrise.png" alt="bed-and-sunrise"
-        (click)="openViewer('bed-and-sunrise.png')" />
-      <img class="gallery-item" src="bed-tv.png" alt="bed-tv" (click)="openViewer('bed-tv.png')" />
-      <img class="gallery-item" src="bed-view.png" alt="bed-view" (click)="openViewer('bed-view.png')" />
-      <img class="gallery-item" src="curtain-close.png" alt="curtain-close" (click)="openViewer('curtain-close.png')" />
-      <img class="gallery-item" src="curtain-open.png" alt="curtain-open" (click)="openViewer('curtain-open.png')" />
-      <img class="gallery-item" src="deck-card.png" alt="deck-card" (click)="openViewer('deck-card.png')" />
-      <img class="gallery-item" src="dining-and-kitchenette-1.png" alt="dining-and-kitchenette-1"
-        (click)="openViewer('dining-and-kitchenette-1.png')" />
-      <img class="gallery-item" src="dining-and-kitchenette-2.png" alt="dining-and-kitchenette-2"
-        (click)="openViewer('dining-and-kitchenette-2.png')" />
-      <img class="gallery-item" src="fire-extinguisher.png" alt="fire-extinguisher"
-        (click)="openViewer('fire-extinguisher.png')" />
-      <img class="gallery-item" src="laundry-area.png" alt="laundry-area" (click)="openViewer('laundry-area.png')" />
-      <img class="gallery-item" src="living-sofa.png" alt="living-sofa" (click)="openViewer('living-sofa.png')" />
-      <img class="gallery-item" src="pool-area.png" alt="pool-area" (click)="openViewer('pool-area.png')" />
-      <img class="gallery-item" src="pool-view.png" alt="pool-view" (click)="openViewer('pool-view.png')" />
-      <img class="gallery-item" src="pool.png" alt="pool" (click)="openViewer('pool.png')" />
-      <img class="gallery-item" src="slow-conversation.png" alt="slow-conversation"
-        (click)="openViewer('slow-conversation.png')" />
-      <img class="gallery-item" src="study-area.png" alt="study-area" (click)="openViewer('study-area.png')" />
-      <img class="gallery-item" src="welcome-note.png" alt="welcome-note" (click)="openViewer('welcome-note.png')" />
+      <img class="gallery-item" *ngFor="let img of galleryImages; let i = index" [src]="img.src" [alt]="img.alt"
+        (click)="openViewer(i)" />
     </div>
+
   </section>
   <!-- UNIT FEATURES -->
   <section class="section section-muted">
     <h3>Unit features</h3>
-    <p class="section-intro">
+    <p class="section">
       Everything you need for a comfortable, restful stay.
     </p>
 
@@ -132,8 +111,10 @@
     <div class="details">
       <p><strong>Sleeping setup:</strong> 1 bed (91 cm × 190 cm) + convertible 2-seater sofa bed.</p>
       <p><strong>Games & wellness:</strong> Othello board game, deck of cards, and a dedicated wellness corner.</p>
-      <p><strong>Location:</strong> Amaia Steps Altaraza, SJDM Bulacan — near SM Tungko, Skyline Hospital, and major
-        establishments.</p>
+      <p>
+        <strong>Location:</strong> Amaia Steps Altaraza, SJDM Bulacan — near SM Tungko, Skyline Hospital, and major
+        establishments.
+      </p>
     </div>
   </section>
 
@@ -153,20 +134,32 @@
   <!-- THE MAIA STORY -->
   <section class="section section-muted">
     <h3>The Maia story</h3>
-    <p class="section-intro">
-      Maia Escapes was created with one intention: to offer a quiet space to pause, rest, and reconnect with yourself.
+    <p class="section">
+      Maia Escapes was created with one intention: to offer a quiet space where you can pause, rest, and reconnect with
+      yourself.
     </p>
     <p>
-      In a world that constantly asks you to keep going, Maia is a gentle invitation to slow down.
-      Here, you are allowed to move slower, breathe deeper, and choose rest on purpose.
+      In a world that constantly asks you to keep going, Maia is a gentle invitation to slow down.<br />
+      <br />
+      Here, you are allowed to move slower, breathe deeper, and choose rest—intentionally.<br />
+      <br />
+      Whether you're seeking solitude, celebrating small moments, or simply needing a break from everyday life, we hope
+      Maia becomes a space where you feel at ease, cared for, and at home.
+
     </p>
+
+
+    Welcome to Maia Escapes—your space to pause.
   </section>
 
   <!-- AVAILABILITY / BOOKING -->
   <section class="section">
     <h3>Ready for your quiet escape?</h3>
-    <p class="section-intro">
-      Choose how you want to book and secure your dates.
+    <p class="section">
+      Choose how you want to book and secure your dates. <br />
+      Platform Discounts: Airbnb and Booking.com may offer discounts of up to 20–50%, depending on your account level
+      and ongoing platform promotions.
+
     </p>
 
     <div class="booking-grid">
@@ -195,24 +188,29 @@
       </mat-card>
 
       <mat-card class="booking-card">
-        <mat-card-title>Book directly & save</mat-card-title>
+        <mat-card-title>Book directly</mat-card-title>
         <mat-card-content>
-          Save up to <strong>20%</strong> when you book directly through our platforms and secure your dates.
+          Book Directly & Chat with <strong>Ai</strong> or <strong>Nats</strong>
+          We're happy to help you find the perfect stay.
         </mat-card-content>
         <mat-card-actions>
           <button mat-raised-button color="accent" (click)="openPlatform('facebook')">
-            Message on Facebook
+            Chat with us
           </button>
         </mat-card-actions>
       </mat-card>
     </div>
 
-    <div class="booking-notes">
-      <p><strong>Payment & deposit:</strong> Full payment and a ₱1,000 refundable deposit are required to confirm your
-        booking.</p>
-      <p><strong>Extra guests:</strong> ₱400 per additional guest (3 years old and above). Recommended max of 3 guests
-        for comfort.</p>
-    </div>
+    <!--<div class="booking-notes">
+      <p>
+        <strong>Payment & deposit:</strong> Full payment and a ₱1,000 refundable deposit are required to confirm your
+        booking.
+      </p>
+      <p>
+        <strong>Extra guests:</strong> ₱400 per additional guest (3 years old and above). Recommended max of 3 guests
+        for comfort.
+      </p>
+    </div>-->
   </section>
 
   <!-- FAQ -->

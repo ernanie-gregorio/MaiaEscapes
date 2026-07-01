@@ -1,9 +1,9 @@
-<div class="dialog-container">
-  <button mat-icon-button mat-dialog-close class="close-btn">
-    <mat-icon>close</mat-icon>
-  </button>
+<div class="viewer-container">
+  <button class="nav-btn left" (click)="prev()">❮</button>
 
-  <div mat-dialog-content class="image-content">
-    <img [src]="data.imageSrc" alt="Preview" class="viewer-img" />
-  </div>
+  <img [src]="currentImage.src.replace('thumbnail', 'gallery')" [alt]="currentImage.alt" class="viewer-img" />
+
+  <button class="nav-btn right" (click)="next()">❯</button>
+
+  <button class="close-btn" (click)="close()">✕</button>
 </div>
